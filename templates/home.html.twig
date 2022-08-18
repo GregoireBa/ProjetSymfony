@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+	<div class="swiper mySwiper">
+		<div class="swiper-wrapper">
+			{% for donut in produits %}
+				<div class="swiper-slide">
+					<div class="fiche_donuts">
+						<div class="prix_donut">{{donut.prix}}€</div>
+
+						<h1>Nappage
+							{{donut.saveur}}</h1>
+
+						<img src="{{ asset("media/" ~ donut.photo) }}" alt="donuts">
+
+						<a href="{{path("cart_add",{id: donut.id})}}" class="btn-commande">Commander</a>
+						<p>{{donut.description}}</p>
+					</div>
+				</div>
+			{% endfor %}
+		</div>-
+	</div>
+	<div class="swiper-pagination"></div>
+
+{% endblock %}
+
+

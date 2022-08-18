@@ -1,0 +1,20 @@
+@media (max-width:768px) {
+
+    .logo{
+        position:none;
+        width:180px;
+    }
+
+    .menuflex{
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top:20px;
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+        bottom: 83px;
+        left: 0;
+        width: 100%;
+    }
+}

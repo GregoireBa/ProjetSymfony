@@ -1,0 +1,56 @@
+{% extends "base.html.twig" %}
+
+
+{% block body %}
+
+
+	<div class="box-page-standard">
+        <div class="donuts-panda"><img src="" alt=""></div>
+		<h1 class="h1-30 pt-2">Informations personnelles</h1>
+
+                {# EMAIL #}
+		<div class="d-box-input">
+
+			<div class="box-info-profil">
+				<h2>Adresse email</h2>
+
+				<span>{{user.email}}</span>
+			</div>
+
+
+			<div class="box-button-edit">
+				<a href="{{path ('front_update_user_email')}}" class="btn-edit"><i class="fa-solid fa-pen-to-square"></i></a>
+			</div>
+
+		</div>
+
+		<hr class="hr-info">
+                
+                {# ADRESSE DE FACTURATION #}
+
+                <div class="d-box-input">
+
+			<div class="box-info-profil">
+				<h2>Adresse de livraison</h2>
+
+				<span>{{user.name}}</span>
+				<span>{{user.firstname}}</span>
+				<span>{{user.adresse}}</span>
+				<span>{{user.cp}}
+					{{user.ville}}</span>
+				<span>{{user.telephone}}</span>
+			</div>
+
+
+			<div class="box-button-edit">
+				<a href="{{path ('front_update_user_adresse')}}" class="btn-edit"><i class="fa-solid fa-pen-to-square"></i></a>
+			</div>
+
+		</div>
+                
+                <div class="box-btn-edit-mdp">
+                <a href="{{path ('front_update_user_mdp')}}" class="btn-edit-mdp">Changer votre mot de passe</a>
+                </div>
+	</div>
+
+{% endblock %}

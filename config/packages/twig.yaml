@@ -1,0 +1,10 @@
+twig:
+    default_path: '%kernel.project_dir%/templates'
+
+    globals:
+        gProfils: '@App\Globals\Profil'
+        gPanierData: '@App\Globals\Cart'
+
+when@test:
+    twig:
+        strict_variables: true
